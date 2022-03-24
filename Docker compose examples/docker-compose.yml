@@ -1,0 +1,18 @@
+# compose version you may serch about the version you use
+version: '3.8'
+
+# Any service inside services mean container
+services:
+    cmd-command:
+        build:
+          context: .
+          dockerfile: ./docker/cmd/Dockerfile
+    website:
+        image: php:apache
+        volumes:
+            - ./website:/var/www/html
+        ports:
+            - 8000:80
+        # this service need to use cmd-command
+        depends_on:
+            - cmd-command
