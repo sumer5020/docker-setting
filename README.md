@@ -1,2 +1,2 @@
-# docker-setting
- Dimple setting to dealing with Dockerfile and docker-compose
+# Docker Setting
+Simple setting to dealing with Dockerfile and docker-compose
